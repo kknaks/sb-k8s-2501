@@ -8,27 +8,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
-  @Value("${custom.jwt.secretKey}")
-  private String jwtSecretKey;
+  @Controller
+  public class HomeController {
+    @Value("${custom.jwt.secretKey}")
+    private String jwtSecretKey;
 
-  @GetMapping("/")
-  @ResponseBody
-  public String home() {
-    return "home";
-  }
+    @GetMapping("/")
+    @ResponseBody
+    public String home() {
+      return "home";
+    }
 
-  @GetMapping("/jwtSecretKey")
-  @ResponseBody
-  public String showJwtSecretKey() {
-    return jwtSecretKey;
-  }
-
-
-  public String showMain() throws UnknownHostException {
-    InetAddress localHost = InetAddress.getLocalHost();
-    // getHostName 메소드를 호출하여 호스트 이름을 얻습니다.
-    String hostname = localHost.getHostName();
-    return "home, hostname : " + hostname;
+    @GetMapping("/jwtSecretKey")
+    @ResponseBody
+    public String showJwtSecretKey() {
+      return jwtSecretKey;
+    }
   }
 }
 
