@@ -33,6 +33,14 @@ spring:
         format_sql: true
         highlight_sql: true
         use_sql_comments: true
+management:
+  endpoint:
+    health:
+      group:
+        readiness:
+          show-components: always
+        liveness:
+          show-components: always
 logging:
   level:
     com.ll.sb20240222: DEBUG
