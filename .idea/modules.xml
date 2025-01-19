@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/k8s.main.iml" filepath="$PROJECT_DIR$/.idea/modules/k8s.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sb-k8s-2501.iml" filepath="$PROJECT_DIR$/.idea/sb-k8s-2501.iml" />
     </modules>
   </component>
